@@ -10,6 +10,12 @@
 
 <br/>
 
+<div align="center">
+<img src="./assets/tech-stack.svg" width="850" alt="Tech Stack"/>
+</div>
+
+<br/>
+
 ---
 
 <div align="center">
