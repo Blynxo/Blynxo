@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="310" viewBox="0 0 850 310">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Orbitron:wght@700&amp;display=swap');
+      .title { font-family: 'Orbitron', 'Space Mono', monospace; font-size: 22px; font-weight: 700; fill: #e2e8f0; letter-spacing: 3px; }
+      .subtitle { font-family: 'Space Mono', monospace; font-size: 11px; fill: #94a3b8; letter-spacing: 2px; }
+      .quote { font-family: 'Space Mono', monospace; font-size: 9px; fill: #64748b; font-style: italic; }
+      .planet-label { font-family: 'Space Mono', monospace; font-size: 8.5px; fill: #94a3b8; }
+    </style>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0f1629"/>
+      <stop offset="100%" stop-color="#060912"/>
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- orbit 1: rx=160, ry=38, center 425,168 -->
+    <path id="orbit1" d="M 265,168 A 160,38 0 1 1 585,168 A 160,38 0 1 1 265,168" fill="none"/>
+    <!-- orbit 2: rx=220, ry=55, center 425,168 -->
+    <path id="orbit2" d="M 205,168 A 220,55 0 1 1 645,168 A 220,55 0 1 1 205,168" fill="none"/>
+    <!-- orbit 3: rx=290, ry=72, center 425,168 -->
+    <path id="orbit3" d="M 135,168 A 290,72 0 1 1 715,168 A 290,72 0 1 1 135,168" fill="none"/>
+    <!-- orbit 4: rx=340, ry=88, center 425,168 -->
+    <path id="orbit4" d="M 85,168 A 340,88 0 1 1 765,168 A 340,88 0 1 1 85,168" fill="none"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="310" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Stars -->
+  <g opacity="0.7">
+    <circle cx="42" cy="28" r="1" fill="#e2e8f0" opacity="0.6"/>
+    <circle cx="120" cy="55" r="0.7" fill="#a5b4fc" opacity="0.8"/>
+    <circle cx="198" cy="19" r="1.1" fill="#e2e8f0" opacity="0.5"/>
+    <circle cx="320" cy="42" r="0.8" fill="#c4b5fd" opacity="0.7"/>
+    <circle cx="470" cy="22" r="1" fill="#e2e8f0" opacity="0.6"/>
+    <circle cx="590" cy="48" r="0.7" fill="#a5b4fc" opacity="0.8"/>
+    <circle cx="680" cy="25" r="1.2" fill="#e2e8f0" opacity="0.5"/>
+    <circle cx="780" cy="60" r="0.9" fill="#c4b5fd" opacity="0.7"/>
+    <circle cx="810" cy="18" r="0.7" fill="#e2e8f0" opacity="0.6"/>
+    <circle cx="75" cy="260" r="0.8" fill="#a5b4fc" opacity="0.5"/>
+    <circle cx="165" cy="285" r="1" fill="#e2e8f0" opacity="0.4"/>
+    <circle cx="720" cy="270" r="0.9" fill="#c4b5fd" opacity="0.6"/>
+    <circle cx="820" cy="250" r="0.7" fill="#e2e8f0" opacity="0.5"/>
+    <circle cx="30" cy="160" r="0.8" fill="#a5b4fc" opacity="0.4"/>
+    <circle cx="830" cy="140" r="1" fill="#e2e8f0" opacity="0.5"/>
+    <circle cx="55" cy="100" r="0.6" fill="#c4b5fd" opacity="0.7"/>
+    <circle cx="795" cy="110" r="0.8" fill="#a5b4fc" opacity="0.6"/>
+    <circle cx="390" cy="10" r="0.7" fill="#e2e8f0" opacity="0.5"/>
+    <circle cx="660" cy="290" r="1" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="250" cy="295" r="0.7" fill="#a5b4fc" opacity="0.5"/>
+  </g>
+
+  <!-- Orbit ellipses -->
+  <ellipse cx="425" cy="168" rx="160" ry="38" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.6"/>
+  <ellipse cx="425" cy="168" rx="220" ry="55" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="425" cy="168" rx="290" ry="72" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4"/>
+  <ellipse cx="425" cy="168" rx="340" ry="88" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.3"/>
+
+  <!-- Core (center planet = Blynx) -->
+  <circle cx="425" cy="168" r="28" fill="url(#coreGlow)" filter="url(#softglow)"/>
+  <circle cx="425" cy="168" r="16" fill="#1e1040" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="425" y="172" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" font-weight="700" fill="#a855f7" letter-spacing="1">B</text>
+
+  <!-- Orbiting planets with animations -->
+  <!-- Orbit 1 planets: JS, React -->
+  <g filter="url(#glow)">
+    <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit1"/>
+    </animateMotion>
+    <circle r="5.5" fill="#f7df1e" stroke="#b5a800" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8" class="planet-label">
+    <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit1"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">JavaScript</tspan>
+  </text>
+
+  <g filter="url(#glow)">
+    <animateMotion dur="12s" begin="-6s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit1"/>
+    </animateMotion>
+    <circle r="5" fill="#61dafb" stroke="#00a8cc" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8">
+    <animateMotion dur="12s" begin="-6s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit1"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">React</tspan>
+  </text>
+
+  <!-- Orbit 2 planets: TypeScript, Node.js -->
+  <g filter="url(#glow)">
+    <animateMotion dur="19s" begin="-4s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit2"/>
+    </animateMotion>
+    <circle r="5.5" fill="#3178c6" stroke="#1a4f8a" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8">
+    <animateMotion dur="19s" begin="-4s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit2"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">TypeScript</tspan>
+  </text>
+
+  <g filter="url(#glow)">
+    <animateMotion dur="19s" begin="-13s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit2"/>
+    </animateMotion>
+    <circle r="5.5" fill="#339933" stroke="#1a6b1a" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8">
+    <animateMotion dur="19s" begin="-13s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit2"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">Node.js</tspan>
+  </text>
+
+  <!-- Orbit 3 planets: Python, Git -->
+  <g filter="url(#glow)">
+    <animateMotion dur="27s" begin="-7s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit3"/>
+    </animateMotion>
+    <circle r="5.5" fill="#3776ab" stroke="#1a4f7a" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8">
+    <animateMotion dur="27s" begin="-7s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit3"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">Python</tspan>
+  </text>
+
+  <g filter="url(#glow)">
+    <animateMotion dur="27s" begin="-19s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit3"/>
+    </animateMotion>
+    <circle r="5" fill="#f05032" stroke="#b02010" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8">
+    <animateMotion dur="27s" begin="-19s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit3"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">Git</tspan>
+  </text>
+
+  <!-- Orbit 4 planets: CardGun, Web -->
+  <g filter="url(#glow)">
+    <animateMotion dur="36s" begin="-10s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit4"/>
+    </animateMotion>
+    <circle r="5.5" fill="#a855f7" stroke="#7c3aed" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8">
+    <animateMotion dur="36s" begin="-10s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit4"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">CardGun</tspan>
+  </text>
+
+  <g filter="url(#glow)">
+    <animateMotion dur="36s" begin="-26s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit4"/>
+    </animateMotion>
+    <circle r="5" fill="#06b6d4" stroke="#0891b2" stroke-width="0.8"/>
+  </g>
+  <text font-family="'Space Mono', monospace" font-size="8.5" fill="#94a3b8">
+    <animateMotion dur="36s" begin="-26s" repeatCount="indefinite" calcMode="linear">
+      <mpath href="#orbit4"/>
+    </animateMotion>
+    <tspan dx="8" dy="3">Web Dev</tspan>
+  </text>
+
+  <!-- Header text -->
+  <text x="425" y="42" text-anchor="middle" class="title">Blynx</text>
+  <text x="425" y="60" text-anchor="middle" class="subtitle">Builder · Developer · Creator</text>
+
+  <!-- Quote at bottom -->
+  <text x="425" y="296" text-anchor="middle" class="quote">"Ship it, then sharpen it."</text>
+</svg>
